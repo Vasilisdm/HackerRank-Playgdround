@@ -6,4 +6,7 @@
     <RootNamespace>HackerRank_Playground</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="LibraryCatalogue\" />
+  </ItemGroup>
 </Project>
