@@ -7,13 +7,12 @@ namespace HackerRank_Playground
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Insert a number to be converted to binary.");
+            int[][] arr = new int[6][];
 
-            int numberToBeBinary = Convert.ToInt32(Console.ReadLine());
-
-            var consecutiveOnes = BinaryHelper.FindConsecutiveOnesInBinary(numberToBeBinary);
-
-            Console.WriteLine($"Consecutive ones of binary conversion are:{consecutiveOnes}");
+            for (int i = 0; i < 6; i++)
+            {
+                arr[i] = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+            }
         }
     }
 }
