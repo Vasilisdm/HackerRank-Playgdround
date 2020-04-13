@@ -9,5 +9,6 @@
   <ItemGroup>
     <Folder Include="LibraryCatalogue\" />
     <Folder Include="Hourglass\" />
+    <Folder Include="Inheritane\" />
   </ItemGroup>
 </Project>
