@@ -10,5 +10,6 @@
     <Folder Include="LibraryCatalogue\" />
     <Folder Include="Hourglass\" />
     <Folder Include="Inheritane\" />
+    <Folder Include="Abstract\" />
   </ItemGroup>
 </Project>
