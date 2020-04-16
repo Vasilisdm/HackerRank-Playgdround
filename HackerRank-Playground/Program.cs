@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using HackerRank_Playground.Abstract;
-using HackerRank_Playground.Inheritane;
+using System.Linq;
+using HackerRank_Playground.Scope;
 
 namespace HackerRank_Playground
 {
@@ -9,11 +8,17 @@ namespace HackerRank_Playground
     {
         static void Main(string[] args)
         {
-            String title = Console.ReadLine();
-            String author = Console.ReadLine();
-            int price = Int32.Parse(Console.ReadLine());
-            MyBook new_novel = new MyBook(title, author, price);
-            new_novel.display();
+            Console.WriteLine($"Insert the number of elements");
+            Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Insert the each element:");
+            int[] a = Console.ReadLine().Split(' ').Select(x => Convert.ToInt32(x)).ToArray();
+
+            Difference d = new Difference(a);
+
+            d.computeDifference();
+
+            Console.Write($"The maximum difference between 2 elements is {d.maximumDifference}");
         }
     }
 }

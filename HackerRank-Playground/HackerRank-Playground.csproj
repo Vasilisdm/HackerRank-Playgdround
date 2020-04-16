@@ -11,5 +11,6 @@
     <Folder Include="Hourglass\" />
     <Folder Include="Inheritane\" />
     <Folder Include="Abstract\" />
+    <Folder Include="Scope\" />
   </ItemGroup>
 </Project>
