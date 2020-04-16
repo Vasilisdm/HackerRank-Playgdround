@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using HackerRank_Playground.Garage;
 using HackerRank_Playground.Scope;
 
 namespace HackerRank_Playground
@@ -8,17 +9,16 @@ namespace HackerRank_Playground
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"Insert the number of elements");
-            Convert.ToInt32(Console.ReadLine());
+            int arrCount = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Insert the each element:");
-            int[] a = Console.ReadLine().Split(' ').Select(x => Convert.ToInt32(x)).ToArray();
+            int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp))
+            ;
+            int[] res = ArrayHelpers.reverseArray(arr);
 
-            Difference d = new Difference(a);
-
-            d.computeDifference();
-
-            Console.Write($"The maximum difference between 2 elements is {d.maximumDifference}");
+            foreach (var number in res)
+            {
+                Console.Write(number);
+            }
         }
     }
 }

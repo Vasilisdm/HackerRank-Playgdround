@@ -12,5 +12,6 @@
     <Folder Include="Inheritane\" />
     <Folder Include="Abstract\" />
     <Folder Include="Scope\" />
+    <Folder Include="Garage\" />
   </ItemGroup>
 </Project>
