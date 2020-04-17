@@ -14,5 +14,6 @@
     <Folder Include="Scope\" />
     <Folder Include="Garage\" />
     <Folder Include="LinkedList\" />
+    <Folder Include="Exceptions\" />
   </ItemGroup>
 </Project>
