@@ -13,5 +13,6 @@
     <Folder Include="Abstract\" />
     <Folder Include="Scope\" />
     <Folder Include="Garage\" />
+    <Folder Include="LinkedList\" />
   </ItemGroup>
 </Project>

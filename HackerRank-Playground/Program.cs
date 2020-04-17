@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Linq;
-using HackerRank_Playground.Garage;
-using HackerRank_Playground.Scope;
+using HackerRank_Playground.LinkedList;
 
 namespace HackerRank_Playground
 {
@@ -9,16 +7,18 @@ namespace HackerRank_Playground
     {
         static void Main(string[] args)
         {
-            int arrCount = Convert.ToInt32(Console.ReadLine());
+            Node head = null;
 
-            int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp))
-            ;
-            int[] res = ArrayHelpers.reverseArray(arr);
-
-            foreach (var number in res)
+            Console.WriteLine("Insert the number of list's elements:");
+            int T = Int32.Parse(Console.ReadLine());
+            while (T-- > 0)
             {
-                Console.Write(number);
+                int data = Int32.Parse(Console.ReadLine());
+                head = CustomLinkedList.insert(head, data);
             }
+
+            Console.WriteLine($"Linked List's nodes: ");
+            CustomLinkedList.Display(head);
         }
     }
 }
