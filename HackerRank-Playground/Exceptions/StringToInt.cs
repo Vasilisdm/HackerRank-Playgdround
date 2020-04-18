@@ -9,7 +9,7 @@ namespace HackerRank_Playground.Exceptions
             {
                 int convertedString = Convert.ToInt32(s);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw new Exception("Bad String");
             }
