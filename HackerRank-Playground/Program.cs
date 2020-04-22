@@ -1,6 +1,5 @@
 ﻿using System;
-using HackerRank_Playground.Interface;
-using HackerRank_Playground.Interfaces;
+using HackerRank_Playground.BubbleSort;
 
 namespace HackerRank_Playground
 {
@@ -8,10 +7,11 @@ namespace HackerRank_Playground
     {
         static void Main(string[] args)
         {
-            int n = Int32.Parse(Console.ReadLine());
-            AdvancedArithmetic myCalculator = new Calculator();
-            int sum = myCalculator.divisorSum(n);
-            Console.WriteLine("I implemented: AdvancedArithmetic\n" + sum);
+            int n = Convert.ToInt32(Console.ReadLine());
+            string[] a_temp = Console.ReadLine().Split(' ');
+            int[] a = Array.ConvertAll(a_temp, Int32.Parse);
+
+            BubbleSort.Bbl.BblSort(a);
         }
     }
 }
