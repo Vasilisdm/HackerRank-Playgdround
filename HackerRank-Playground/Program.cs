@@ -1,6 +1,5 @@
 ﻿using System;
-using HackerRank_Playground.BubbleSort;
-using HackerRank_Playground.Generics;
+using HackerRank_Playground.BST;
 
 namespace HackerRank_Playground
 {
@@ -8,22 +7,17 @@ namespace HackerRank_Playground
     {
         static void Main(string[] args)
         {
-			int n = Convert.ToInt32(Console.ReadLine());
-			int[] intArray = new int[n];
-			for (int i = 0; i < n; i++)
-			{
-				intArray[i] = Convert.ToInt32(Console.ReadLine());
-			}
-
-			n = Convert.ToInt32(Console.ReadLine());
-			string[] stringArray = new string[n];
-			for (int i = 0; i < n; i++)
-			{
-				stringArray[i] = Console.ReadLine();
-			}
-
-			GenericArray<int>.PrintArray<Int32>(intArray);
-			GenericArray<string>.PrintArray<string>(stringArray);
-		}
+            Node root = null;
+            Console.WriteLine("Insert the number of tree nodes.");
+            int T = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Start inserting tree nodes.");
+            while (T-- > 0)
+            {
+                int data = Int32.Parse(Console.ReadLine());
+                root = BinaryTree.Insert(root, data);
+            }
+            int height = BinaryTree.GetHeight(root);
+            Console.WriteLine($"The height of the Binary Tree is: {height}");
+        }
     }
 }

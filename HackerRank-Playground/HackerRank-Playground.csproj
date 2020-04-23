@@ -19,5 +19,6 @@
     <Folder Include="Interfaces\" />
     <Folder Include="BubbleSort\" />
     <Folder Include="Generics\" />
+    <Folder Include="BST\" />
   </ItemGroup>
 </Project>
