@@ -20,5 +20,6 @@
     <Folder Include="BubbleSort\" />
     <Folder Include="Generics\" />
     <Folder Include="BST\" />
+    <Folder Include="WarmUP\" />
   </ItemGroup>
 </Project>

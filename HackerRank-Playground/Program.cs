@@ -1,5 +1,6 @@
 ﻿using System;
 using HackerRank_Playground.BST;
+using HackerRank_Playground.WarmUP;
 
 namespace HackerRank_Playground
 {
@@ -7,16 +8,13 @@ namespace HackerRank_Playground
     {
         static void Main(string[] args)
         {
-            Node root = null;
-            Console.WriteLine("Insert the number of tree nodes.");
-            int T = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Start inserting tree nodes.");
-            while (T-- > 0)
-            {
-                int data = Int32.Parse(Console.ReadLine());
-                root = BinaryTree.Insert(root, data);
-            }
-            BinaryTree.LevelOrder(root);
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            int[] ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt32(arTemp));
+
+            int result = PairHelper.sockMerchant(n, ar);
+
+            Console.WriteLine($"{result}");
         }
     }
 }
