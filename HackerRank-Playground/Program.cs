@@ -16,8 +16,7 @@ namespace HackerRank_Playground
                 int data = Int32.Parse(Console.ReadLine());
                 root = BinaryTree.Insert(root, data);
             }
-            int height = BinaryTree.GetHeight(root);
-            Console.WriteLine($"The height of the Binary Tree is: {height}");
+            BinaryTree.LevelOrder(root);
         }
     }
 }
