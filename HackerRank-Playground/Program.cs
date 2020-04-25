@@ -1,6 +1,6 @@
 ﻿using System;
-using HackerRank_Playground.BST;
-using HackerRank_Playground.WarmUP;
+using HackerRank_Playground.LinkedList;
+using Node = HackerRank_Playground.LinkedList.Node;
 
 namespace HackerRank_Playground
 {
@@ -8,13 +8,16 @@ namespace HackerRank_Playground
     {
         static void Main(string[] args)
         {
-            int n = Convert.ToInt32(Console.ReadLine());
+            Node head = null;
+            int T = Int32.Parse(Console.ReadLine());
+            while (T-- > 0)
+            {
+                int data = Int32.Parse(Console.ReadLine());
+                head = CustomLinkedList.Insert(head, data);
+            }
 
-            int[] c = Array.ConvertAll(Console.ReadLine().Split(' '), cTemp => Convert.ToInt32(cTemp))
-            ;
-            int result = Clouds.JumpingOnClouds(c);
-
-            Console.WriteLine($"{result}");
+            head = CustomLinkedList.RemoveDuplicates(head);
+            CustomLinkedList.Display(head);
         }
     }
 }

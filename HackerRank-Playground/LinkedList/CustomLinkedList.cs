@@ -13,7 +13,33 @@ namespace HackerRank_Playground.LinkedList
             }
         }
 
-        public static Node insert(Node head, int data)
+        public static Node RemoveDuplicates(Node head)
+        {
+            if (head == null)
+            {
+                return null;
+            }
+
+            Node currentHead = head;
+            Node nextHead = head.next;
+
+            while (nextHead != null)
+            {
+                if (nextHead.data != currentHead.data)
+                {
+                    currentHead.next = nextHead;
+                    currentHead = nextHead;
+                }
+
+                nextHead = nextHead.next;
+            }
+
+            currentHead.next = null;
+
+            return head;
+        }
+
+        public static Node Insert(Node head, int data)
         {
             Node p = new Node(data);
 
