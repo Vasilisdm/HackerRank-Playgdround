@@ -15,19 +15,24 @@ namespace HackerRank_Playground.LinkedList
 
         public static Node insert(Node head, int data)
         {
-            if (head==null)
+            Node p = new Node(data);
+
+            if (head == null)
             {
-                return new Node(data);
+                head = p;
             }
-            else if (head.next ==null)
+            else if (head.next == null)
             {
-                head.next = new Node(data);
+                head.next = p;
             }
             else
             {
-                insert(head.next, data);
-            }
+                Node start = head;
+                while (start.next != null)
+                    start = start.next;
+                start.next = p;
 
+            }
             return head;
         }
     }
