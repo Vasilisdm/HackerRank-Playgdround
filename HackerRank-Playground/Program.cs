@@ -10,9 +10,9 @@ namespace HackerRank_Playground
         {
             int n = Convert.ToInt32(Console.ReadLine());
 
-            int[] ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt32(arTemp));
-
-            int result = PairHelper.sockMerchant(n, ar);
+            int[] c = Array.ConvertAll(Console.ReadLine().Split(' '), cTemp => Convert.ToInt32(cTemp))
+            ;
+            int result = Clouds.JumpingOnClouds(c);
 
             Console.WriteLine($"{result}");
         }
