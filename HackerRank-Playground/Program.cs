@@ -1,6 +1,5 @@
 ﻿using System;
-using HackerRank_Playground.LinkedList;
-using Node = HackerRank_Playground.LinkedList.Node;
+using HackerRank_Playground.Complexity;
 
 namespace HackerRank_Playground
 {
@@ -8,16 +7,12 @@ namespace HackerRank_Playground
     {
         static void Main(string[] args)
         {
-            Node head = null;
-            int T = Int32.Parse(Console.ReadLine());
-            while (T-- > 0)
+            for (var t = Get(); t > 0; --t)
             {
-                int data = Int32.Parse(Console.ReadLine());
-                head = CustomLinkedList.Insert(head, data);
+                Console.WriteLine(Prime.IsPrime(Get()) ? "Prime" : "Not prime");
             }
-
-            head = CustomLinkedList.RemoveDuplicates(head);
-            CustomLinkedList.Display(head);
         }
+
+        public static int Get() => int.Parse(Console.ReadLine());
     }
 }
