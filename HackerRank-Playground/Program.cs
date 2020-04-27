@@ -1,5 +1,6 @@
 ﻿using System;
 using HackerRank_Playground.GregorianCalendar;
+using HackerRank_Playground.WarmUP;
 
 namespace HackerRank_Playground
 {
@@ -7,15 +8,13 @@ namespace HackerRank_Playground
     {
         static void Main(string[] args)
         {
-            int[] returnedDate = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt32(arTemp));
-            int[] dueDate = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt32(arTemp));
+            string s = Console.ReadLine();
 
+            long n = Convert.ToInt64(Console.ReadLine());
 
-            Console.WriteLine(CalcDate.DateDifference(returnedDate, dueDate));
+            long result = RepeatedString.AOccurances(s, n);
 
-
+            Console.WriteLine(result);
         }
-
-        
     }
 }
