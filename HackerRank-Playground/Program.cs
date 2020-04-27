@@ -1,5 +1,5 @@
 ﻿using System;
-using HackerRank_Playground.Complexity;
+using HackerRank_Playground.GregorianCalendar;
 
 namespace HackerRank_Playground
 {
@@ -7,12 +7,15 @@ namespace HackerRank_Playground
     {
         static void Main(string[] args)
         {
-            for (var t = Get(); t > 0; --t)
-            {
-                Console.WriteLine(Prime.IsPrime(Get()) ? "Prime" : "Not prime");
-            }
+            int[] returnedDate = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt32(arTemp));
+            int[] dueDate = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt32(arTemp));
+
+
+            Console.WriteLine(CalcDate.DateDifference(returnedDate, dueDate));
+
+
         }
 
-        public static int Get() => int.Parse(Console.ReadLine());
+        
     }
 }

@@ -22,5 +22,6 @@
     <Folder Include="BST\" />
     <Folder Include="WarmUP\" />
     <Folder Include="Complexity\" />
+    <Folder Include="GregorianCalendar\" />
   </ItemGroup>
 </Project>
