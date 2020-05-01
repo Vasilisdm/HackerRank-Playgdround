@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using HackerRank_Playground.GregorianCalendar;
 using HackerRank_Playground.WarmUP;
 
@@ -8,13 +10,31 @@ namespace HackerRank_Playground
     {
         static void Main(string[] args)
         {
-            string s = Console.ReadLine();
+            int N = Convert.ToInt32(Console.ReadLine());
+            Regex rx = new Regex(@"@gmail\.com$");
 
-            long n = Convert.ToInt64(Console.ReadLine());
+            List<string> namesList = new List<string>();
 
-            long result = RepeatedString.AOccurances(s, n);
+            for (int NItr = 0; NItr < N; NItr++)
+            {
+                string[] firstNameEmailID = Console.ReadLine().Split(' ');
 
-            Console.WriteLine(result);
+                string firstName = firstNameEmailID[0];
+                
+                string emailID = firstNameEmailID[1];
+
+                Match match = rx.Match(emailID);
+                if (match.Success)
+                {
+                    namesList.Add(firstName);
+                }
+            }
+
+            namesList.Sort();
+            foreach (var name in namesList)
+            {
+                Console.WriteLine(name);
+            }
         }
     }
 }
