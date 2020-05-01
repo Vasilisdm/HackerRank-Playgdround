@@ -8,33 +8,33 @@ namespace HackerRank_Playground
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(String[] args)
         {
-            int N = Convert.ToInt32(Console.ReadLine());
-            Regex rx = new Regex(@"@gmail\.com$");
-
-            List<string> namesList = new List<string>();
-
-            for (int NItr = 0; NItr < N; NItr++)
+            int t = Convert.ToInt32(Console.ReadLine());
+            for (int a0 = 0; a0 < t; a0++)
             {
-                string[] firstNameEmailID = Console.ReadLine().Split(' ');
+                string[] tokens_n = Console.ReadLine().Split(' ');
+                int n = Convert.ToInt32(tokens_n[0]);
+                int k = Convert.ToInt32(tokens_n[1]);
+                Console.WriteLine(TestCase(n, k));
+            }
+        }
 
-                string firstName = firstNameEmailID[0];
-                
-                string emailID = firstNameEmailID[1];
-
-                Match match = rx.Match(emailID);
-                if (match.Success)
+        static int TestCase(int n, int k)
+        {
+            int max = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                for (int j = i + 1; j <= n; j++)
                 {
-                    namesList.Add(firstName);
+                    int val = i & j;
+                    if (max < val && val < k)
+                    {
+                        max = val;
+                    }
                 }
             }
-
-            namesList.Sort();
-            foreach (var name in namesList)
-            {
-                Console.WriteLine(name);
-            }
+            return max;
         }
     }
 }
