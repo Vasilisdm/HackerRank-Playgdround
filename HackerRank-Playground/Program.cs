@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.RegularExpressions;
-using HackerRank_Playground.GregorianCalendar;
-using HackerRank_Playground.WarmUP;
+using HackerRank_Playground.Codewars.CountTheSmileyFaces;
 
 namespace HackerRank_Playground
 {
@@ -11,31 +7,8 @@ namespace HackerRank_Playground
     {
         static void Main(String[] args)
         {
-
-        }
-
-
-        public List<string> reorderLines(int logFileSize, string[] logLines)
-        {
-            List<string> orderedLogLines = new List<string>();
-
-            for (int i = 0; i < logFileSize - 1; i++)
-            {
-                if (isAlphaNumeric(logLines[i]))
-                {
-                    orderedLogLines.Add(logLines[i]);
-                }
-            }
-
-            orderedLogLines.Sort();
-
-            return orderedLogLines;
-        }
-
-        public static Boolean isAlphaNumeric(string strToCheck)
-        {
-            Regex rg = new Regex(@"^[a-zA-Z0-9\s,]*$");
-            return rg.IsMatch(strToCheck);
+            var str = new string[] { ":D", ":~)", ";~D", ":)" };
+            Console.WriteLine($"{Smiles.CountSmileys(str)}");
         }
     }
 }

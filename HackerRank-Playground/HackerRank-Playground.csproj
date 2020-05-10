@@ -25,5 +25,6 @@
     <Folder Include="GregorianCalendar\" />
     <Folder Include="Codewars\" />
     <Folder Include="Codewars\BasicMathematicalOperations\" />
+    <Folder Include="Codewars\CountTheSmileyFaces\" />
   </ItemGroup>
 </Project>
