@@ -23,5 +23,7 @@
     <Folder Include="WarmUP\" />
     <Folder Include="Complexity\" />
     <Folder Include="GregorianCalendar\" />
+    <Folder Include="Codewars\" />
+    <Folder Include="Codewars\BasicMathematicalOperations\" />
   </ItemGroup>
 </Project>

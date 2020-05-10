@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 using HackerRank_Playground.GregorianCalendar;
 using HackerRank_Playground.WarmUP;
@@ -10,31 +11,31 @@ namespace HackerRank_Playground
     {
         static void Main(String[] args)
         {
-            int t = Convert.ToInt32(Console.ReadLine());
-            for (int a0 = 0; a0 < t; a0++)
-            {
-                string[] tokens_n = Console.ReadLine().Split(' ');
-                int n = Convert.ToInt32(tokens_n[0]);
-                int k = Convert.ToInt32(tokens_n[1]);
-                Console.WriteLine(TestCase(n, k));
-            }
+
         }
 
-        static int TestCase(int n, int k)
+
+        public List<string> reorderLines(int logFileSize, string[] logLines)
         {
-            int max = 0;
-            for (int i = 1; i <= n; i++)
+            List<string> orderedLogLines = new List<string>();
+
+            for (int i = 0; i < logFileSize - 1; i++)
             {
-                for (int j = i + 1; j <= n; j++)
+                if (isAlphaNumeric(logLines[i]))
                 {
-                    int val = i & j;
-                    if (max < val && val < k)
-                    {
-                        max = val;
-                    }
+                    orderedLogLines.Add(logLines[i]);
                 }
             }
-            return max;
+
+            orderedLogLines.Sort();
+
+            return orderedLogLines;
+        }
+
+        public static Boolean isAlphaNumeric(string strToCheck)
+        {
+            Regex rg = new Regex(@"^[a-zA-Z0-9\s,]*$");
+            return rg.IsMatch(strToCheck);
         }
     }
 }
