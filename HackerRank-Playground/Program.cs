@@ -1,5 +1,5 @@
 ﻿using System;
-using HackerRank_Playground.Codewars.CountTheSmileyFaces;
+using HackerRank_Playground.Codewars.VasyaClerk;
 
 namespace HackerRank_Playground
 {
@@ -7,8 +7,8 @@ namespace HackerRank_Playground
     {
         static void Main(String[] args)
         {
-            var str = new string[] { ":D", ":~)", ";~D", ":)" };
-            Console.WriteLine($"{Smiles.CountSmileys(str)}");
+            var isAbleToGiveChange = Line.Tickets(new int[] { 25, 100 });
+            Console.WriteLine(isAbleToGiveChange);
         }
     }
 }

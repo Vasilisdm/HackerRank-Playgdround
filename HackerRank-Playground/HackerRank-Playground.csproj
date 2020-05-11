@@ -26,5 +26,6 @@
     <Folder Include="Codewars\" />
     <Folder Include="Codewars\BasicMathematicalOperations\" />
     <Folder Include="Codewars\CountTheSmileyFaces\" />
+    <Folder Include="Codewars\Vasya - Clerk\" />
   </ItemGroup>
 </Project>
