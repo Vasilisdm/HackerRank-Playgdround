@@ -1,4 +1,5 @@
 ﻿using System;
+using HackerRank_Playground.Codewars.ArrayDiff;
 using HackerRank_Playground.Codewars.VasyaClerk;
 
 namespace HackerRank_Playground
@@ -7,8 +8,16 @@ namespace HackerRank_Playground
     {
         static void Main(String[] args)
         {
-            var isAbleToGiveChange = Line.Tickets(new int[] { 25, 100 });
-            Console.WriteLine(isAbleToGiveChange);
+            int[] ar1 = new int[] { 1,2 };
+            int[] ar2 = new int[] { 1 };
+
+            int[] ardiff = ArrayDiff.ElementSubtraction(ar1, ar2);
+
+            foreach (var number in ardiff)
+            {
+                Console.WriteLine(number);
+
+            }
         }
     }
 }
